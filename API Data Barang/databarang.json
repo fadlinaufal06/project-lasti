@@ -1,0 +1,14 @@
+{
+    "barang": [
+        {
+            "id": 1,
+            "warna": "merah",
+            "Posisi": "Karyawan",
+            "jenis": "baju",
+            "merek": "hm",
+            "waktu pembelian": "5 april 2021",
+            "waktu penjualan": "20 april 2021",
+            "jumlah pembelian": "100"
+        }
+    ]
+}
