@@ -1,13 +1,67 @@
 {
     "barang": [
         {
-            "id": 1,
-            "warna": "merah",
+            "id_barang": 1,
+            "jenis": "sepatu/sendal",
+            "merek": "Nike",
+            "nama": "Jordan Mens Air 1 Retro High Og '85",
+            "harga": 19000000
+        },
+        {
+            "id_barang": 2,
+            "jenis": "sepatu/sendal",
+            "merek": "Adidas",
+            "nama": "Adidas Originals Campus Adv FV5943",
+            "harga": 1298142
+        },
+        {
+            "id_barang": 3,
+            "jenis": "sepatu/sendal",
+            "merek": "Crocs",
+            "nama": "Crocs original",
+            "harga": 249000
+        },
+        {
+            "id_barang": 4,
             "jenis": "baju",
-            "merek": "hm",
-            "waktu pembelian": "5 april 2021",
-            "waktu penjualan": "20 april 2021",
-            "jumlah pembelian": "100"
+            "merek": "Hammer",
+            "nama": "Hammer Ladies T-shirt print",
+            "harga": 641939
+        },
+        {
+            "id_barang": 5,
+            "jenis": "baju",
+            "merek": "The Executive",
+            "nama": "V-NECK PRINTED TOP",
+            "harga": 142121
+        },
+        {
+            "id_barang": 6,
+            "jenis": "baju",
+            "merek": "Greenlight",
+            "nama": "Greenlight Men Tshirt 300520",
+            "harga": 88750
+        },
+        {
+            "id_barang": 7,
+            "jenis": "sepatu/sendal",
+            "merek": "Under Armour",
+            "nama": "Under Armour Curry 4",
+            "harga": 1857759
+        },
+        {
+            "id_barang": 9,
+            "jenis": "celana",
+            "merek": "Levis",
+            "nama": "Levis Original Jeans",
+            "harga": 1335098
+        },
+        {
+            "id_barang": 10,
+            "jenis": "celana",
+            "merek": "Lee",
+            "nama": "Lee Slimfit",
+            "harga": 335000
         }
     ]
 }
