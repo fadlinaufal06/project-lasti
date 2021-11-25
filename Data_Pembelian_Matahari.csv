@@ -1,52 +1,51 @@
-ID_barang;Warna_barang;Merek;Jenis;Tanggal_penjualan;Tanggal_pembelian;Harga;Universal_size_(1-10);Diskon_(%);Rating;;;;;;;
-1;cream;nike;sepatu/sendal;28/11/2020;15/06/2022;Rp19.000.000;1;35;3,1;;;;;;;
-2;abu-abu;adidas;sepatu/sendal;20/11/2021;18/03/2022;Rp1.298.142;9;69,9;3,5;;;;;;;
-1;biru;nike;sepatu/sendal;24/10/2021;30/09/2022;Rp19.000.000;5;60,5;0,4;;;;;;;
-10;cokelat;Lee;celana;04/01/2021;08/10/2022;Rp335.000;8;55;0,6;;;;;;;
-7;cream;under armour;sepatu/sendal;12/03/2021;11/12/2021;Rp1.857.759;3;66,1;2,1;;;;;;;
-1;cokelat;nike;sepatu/sendal;09/06/2021;17/09/2022;Rp19.000.000;10;50,9;2,9;;;;;;;
-9;cokelat;Levis;celana;16/01/2021;13/10/2022;Rp1.335.098;2;38,7;1,6;;;;;;;
-5;biru;The executive;baju;14/07/2021;26/06/2022;Rp142.121;7;76,6;1,3;;;;;;;
-4;abu-abu;Hammer;baju;27/11/2020;27/09/2022;Rp249.900;1;0,2;3,7;;;;;;;
-3;cokelat;crocs;sepatu/sendal;04/10/2021;09/10/2022;Rp641.939;1;65,8;4,0;;;;;;;
-4;putih;Hammer;baju;07/10/2021;21/09/2022;Rp249.900;10;78,6;4,1;;;;;;;
-9;hitam;Levis;celana;17/03/2021;01/06/2022;Rp1.335.098;5;78;0,1;;;;;;;
-8;abu-abu;Polo;baju;19/12/2020;29/07/2022;Rp450.000;5;4,1;0,7;;;;;;;
-6;merah;Greenlight;baju;03/06/2021;29/08/2022;Rp88.750;9;70,4;0,3;;;;;;;
-4;kuning;Hammer;baju;01/07/2021;29/12/2021;Rp641.939;6;27,2;4,6;;;;;;;
-3;hijau;crocs;sepatu/sendal;09/04/2021;22/11/2022;Rp249.900;10;5,8;1,9;;;;;;;
-4;cokelat;Hammer;baju;03/10/2021;19/09/2022;Rp641.939;6;17,6;3,5;;;;;;;
-4;hitam;Hammer;baju;22/03/2021;15/10/2022;Rp641.939;1;67,2;1,7;;;;;;;
-10;cream;Lee;celana;30/01/2021;20/05/2022;Rp335.000;6;45,5;0,3;;;;;;;
-1;biru dongker;nike;sepatu/sendal;20/11/2021;22/07/2022;Rp19.000.000;7;18,7;0,4;;;;;;;
-9;cream;Levis;celana;28/03/2021;19/01/2022;Rp1.335.098;8;22,5;4,6;;;;;;;
-2;abu-abu;adidas;sepatu/sendal;16/03/2021;29/08/2022;Rp1.298.142;8;62,4;0,8;;;;;;;
-2;merah;adidas;sepatu/sendal;11/07/2021;12/04/2022;Rp1.298.142;10;57,5;4,7;;;;;;;
-9;putih;Levis;celana;26/05/2021;20/06/2022;Rp1.335.098;3;29,3;4,7;;;;;;;
-5;hijau;The executive;baju;05/07/2021;07/11/2022;Rp142.121;4;20,3;2,9;;;;;;;
-8;hijau;Polo;baju;03/08/2021;26/04/2022;Rp450.000;8;62,2;4,7;;;;;;;
-6;cokelat;Greenlight;baju;13/04/2021;31/10/2022;Rp88.750;4;60,1;0,9;;;;;;;
-5;hijau;The executive;baju;21/08/2021;28/10/2022;Rp142.121;7;18,4;2,2;;;;;;;
-9;kuning;Levis;celana;05/11/2021;21/09/2022;Rp1.335.098;4;9;1,0;;;;;;;
-10;cokelat;Lee;celana;16/08/2021;15/01/2022;Rp335.000;1;21,5;3,3;;;;;;;
-7;biru;under armour;sepatu/sendal;22/03/2021;05/12/2021;Rp1.857.759;9;66,2;1,7;;;;;;;
-10;biru dongker;Lee;celana;14/04/2021;21/07/2022;Rp335.000;9;75,8;4,7;;;;;;;
-2;merah;adidas;sepatu/sendal;10/12/2020;08/06/2022;Rp1.298.142;7;76,9;0,4;;;;;;;
-8;hijau;Polo;baju;11/10/2021;24/09/2022;Rp450.000;1;35,7;4,4;;;;;;;
-3;kuning;crocs;sepatu/sendal;28/08/2021;30/12/2021;Rp249.900;8;4;1,5;;;;;;;
-2;cokelat;adidas;sepatu/sendal;27/03/2021;20/12/2021;Rp1.298.142;8;21,7;4,9;;;;;;;
-1;cream;nike;sepatu/sendal;02/08/2021;01/12/2021;Rp19.000.000;4;31,8;0,5;;;;;;;
-2;abu-abu;adidas;sepatu/sendal;01/09/2021;29/06/2022;Rp1.298.142;4;55;3,6;;;;;;;
-9;hijau;Levis;celana;23/03/2021;20/03/2022;Rp1.335.098;8;40,6;1,7;;;;;;;
-5;biru dongker;The executive;celana;01/09/2021;20/11/2022;Rp142.121;3;13,2;1,1;;;;;;;
-9;putih;Levis;celana;01/10/2021;14/10/2022;Rp1.335.098;3;43,2;1,1;;;;;;;
-5;putih;The executive;baju;13/03/2021;22/02/2022;Rp142.121;4;39,2;2,8;;;;;;;
-5;kuning;The executive;baju;15/08/2021;25/10/2022;Rp142.121;3;1,8;1,0;;;;;;;
-1;hitam;nike;sepatu/sendal;28/01/2021;17/07/2022;Rp19.000.000;3;85;0,4;;;;;;;
-8;hitam;Polo;baju;21/12/2020;19/04/2022;Rp450.000;4;21,2;2,4;;;;;;;
-10;kuning;Lee;celana;23/01/2021;18/04/2022;Rp335.000;9;63,9;3,9;;;;;;;
-5;biru dongker;The executive;baju;28/11/2020;19/07/2022;Rp142.121;9;45,3;1,1;;;;;;;
-5;abu-abu;The executive;baju;27/09/2021;11/07/2022;Rp142.121;5;24,3;1,0;;;;;;;
-3;hitam;crocs;sepatu/sendal;07/10/2021;26/06/2022;Rp249.900;7;42,9;3,3;;;;;;;
-8;cokelat;Polo;baju;06/12/2020;06/07/2022;Rp450.000;6;4,2;3,5;;;;;;;
-;;;;;;;;;;;;;;;;
+ID_barang;Warna_barang;Merek;Jenis;Tanggal_penjualan;Tanggal_pembelian;Harga;Universal_size_(1-10);Diskon_(%);Rating
+1;cream;nike;sepatu/sendal;28/11/2020;15/06/2022;Rp19.000.000;1;35;3,1
+2;abu-abu;adidas;sepatu/sendal;20/11/2021;18/03/2022;Rp1.298.142;9;69,9;3,5
+1;biru;nike;sepatu/sendal;24/10/2021;30/09/2022;Rp19.000.000;5;60,5;0,4
+10;cokelat;Lee;celana;04/01/2021;08/10/2022;Rp335.000;8;55;0,6
+7;cream;under armour;sepatu/sendal;12/03/2021;11/12/2021;Rp1.857.759;3;66,1;2,1
+1;cokelat;nike;sepatu/sendal;09/06/2021;17/09/2022;Rp19.000.000;10;50,9;2,9
+9;cokelat;Levis;celana;16/01/2021;13/10/2022;Rp1.335.098;2;38,7;1,6
+5;biru;The executive;baju;14/07/2021;26/06/2022;Rp142.121;7;76,6;1,3
+4;abu-abu;Hammer;baju;27/11/2020;27/09/2022;Rp249.900;1;0,2;3,7
+3;cokelat;crocs;sepatu/sendal;04/10/2021;09/10/2022;Rp641.939;1;65,8;4,0
+4;putih;Hammer;baju;07/10/2021;21/09/2022;Rp249.900;10;78,6;4,1
+9;hitam;Levis;celana;17/03/2021;01/06/2022;Rp1.335.098;5;78;0,1
+8;abu-abu;Polo;baju;19/12/2020;29/07/2022;Rp450.000;5;4,1;0,7
+6;merah;Greenlight;baju;03/06/2021;29/08/2022;Rp88.750;9;70,4;0,3
+4;kuning;Hammer;baju;01/07/2021;29/12/2021;Rp641.939;6;27,2;4,6
+3;hijau;crocs;sepatu/sendal;09/04/2021;22/11/2022;Rp249.900;10;5,8;1,9
+4;cokelat;Hammer;baju;03/10/2021;19/09/2022;Rp641.939;6;17,6;3,5
+4;hitam;Hammer;baju;22/03/2021;15/10/2022;Rp641.939;1;67,2;1,7
+10;cream;Lee;celana;30/01/2021;20/05/2022;Rp335.000;6;45,5;0,3
+1;biru dongker;nike;sepatu/sendal;20/11/2021;22/07/2022;Rp19.000.000;7;18,7;0,4
+9;cream;Levis;celana;28/03/2021;19/01/2022;Rp1.335.098;8;22,5;4,6
+2;abu-abu;adidas;sepatu/sendal;16/03/2021;29/08/2022;Rp1.298.142;8;62,4;0,8
+2;merah;adidas;sepatu/sendal;11/07/2021;12/04/2022;Rp1.298.142;10;57,5;4,7
+9;putih;Levis;celana;26/05/2021;20/06/2022;Rp1.335.098;3;29,3;4,7
+5;hijau;The executive;baju;05/07/2021;07/11/2022;Rp142.121;4;20,3;2,9
+8;hijau;Polo;baju;03/08/2021;26/04/2022;Rp450.000;8;62,2;4,7
+6;cokelat;Greenlight;baju;13/04/2021;31/10/2022;Rp88.750;4;60,1;0,9
+5;hijau;The executive;baju;21/08/2021;28/10/2022;Rp142.121;7;18,4;2,2
+9;kuning;Levis;celana;05/11/2021;21/09/2022;Rp1.335.098;4;9;1,0
+10;cokelat;Lee;celana;16/08/2021;15/01/2022;Rp335.000;1;21,5;3,3
+7;biru;under armour;sepatu/sendal;22/03/2021;05/12/2021;Rp1.857.759;9;66,2;1,7
+10;biru dongker;Lee;celana;14/04/2021;21/07/2022;Rp335.000;9;75,8;4,7
+2;merah;adidas;sepatu/sendal;10/12/2020;08/06/2022;Rp1.298.142;7;76,9;0,4
+8;hijau;Polo;baju;11/10/2021;24/09/2022;Rp450.000;1;35,7;4,4
+3;kuning;crocs;sepatu/sendal;28/08/2021;30/12/2021;Rp249.900;8;4;1,5
+2;cokelat;adidas;sepatu/sendal;27/03/2021;20/12/2021;Rp1.298.142;8;21,7;4,9
+1;cream;nike;sepatu/sendal;02/08/2021;01/12/2021;Rp19.000.000;4;31,8;0,5
+2;abu-abu;adidas;sepatu/sendal;01/09/2021;29/06/2022;Rp1.298.142;4;55;3,6
+9;hijau;Levis;celana;23/03/2021;20/03/2022;Rp1.335.098;8;40,6;1,7
+5;biru dongker;The executive;celana;01/09/2021;20/11/2022;Rp142.121;3;13,2;1,1
+9;putih;Levis;celana;01/10/2021;14/10/2022;Rp1.335.098;3;43,2;1,1
+5;putih;The executive;baju;13/03/2021;22/02/2022;Rp142.121;4;39,2;2,8
+5;kuning;The executive;baju;15/08/2021;25/10/2022;Rp142.121;3;1,8;1,0
+1;hitam;nike;sepatu/sendal;28/01/2021;17/07/2022;Rp19.000.000;3;85;0,4
+8;hitam;Polo;baju;21/12/2020;19/04/2022;Rp450.000;4;21,2;2,4
+10;kuning;Lee;celana;23/01/2021;18/04/2022;Rp335.000;9;63,9;3,9
+5;biru dongker;The executive;baju;28/11/2020;19/07/2022;Rp142.121;9;45,3;1,1
+5;abu-abu;The executive;baju;27/09/2021;11/07/2022;Rp142.121;5;24,3;1,0
+3;hitam;crocs;sepatu/sendal;07/10/2021;26/06/2022;Rp249.900;7;42,9;3,3
+8;cokelat;Polo;baju;06/12/2020;06/07/2022;Rp450.000;6;4,2;3,5
