@@ -1,68 +1,92 @@
 {
-    
     "barang": [
         {
             "id_barang": 1,
             "jenis": "sepatu/sendal",
             "merek": "Nike",
             "nama": "Jordan Mens Air 1 Retro High Og '85",
-            "harga": 19000000
+            "harga": 19000000,
+            "id_tag": 4294943496
         },
         {
             "id_barang": 2,
             "jenis": "sepatu/sendal",
             "merek": "Adidas",
             "nama": "Adidas Originals Campus Adv FV5943",
-            "harga": 1298142
+            "harga": 1298142,
+            "id_tag": 4294943497
         },
         {
             "id_barang": 3,
             "jenis": "sepatu/sendal",
             "merek": "Crocs",
             "nama": "Crocs original",
-            "harga": 249000
+            "harga": 249000,
+            "id_tag": 4294943497
         },
         {
             "id_barang": 4,
             "jenis": "baju",
             "merek": "Hammer",
             "nama": "Hammer Ladies T-shirt print",
-            "harga": 641939
+            "harga": 641939,
+            "id_tag": 4294943498
         },
         {
             "id_barang": 5,
             "jenis": "baju",
             "merek": "The Executive",
             "nama": "V-NECK PRINTED TOP",
-            "harga": 142121
+            "harga": 142121,
+            "id_tag": 4294943499
         },
         {
             "id_barang": 6,
             "jenis": "baju",
             "merek": "Greenlight",
             "nama": "Greenlight Men Tshirt 300520",
-            "harga": 88750
+            "harga": 88750,
+            "id_tag": 4294943401
         },
         {
             "id_barang": 7,
             "jenis": "sepatu/sendal",
             "merek": "Under Armour",
             "nama": "Under Armour Curry 4",
-            "harga": 1857759
+            "harga": 1857759,
+            "id_tag": 4294943402
         },
         {
             "id_barang": 9,
             "jenis": "celana",
             "merek": "Levis",
             "nama": "Levis Original Jeans",
-            "harga": 1335098
+            "harga": 1335098,
+            "id_tag": 4294943403
         },
         {
             "id_barang": 10,
             "jenis": "celana",
             "merek": "Lee",
             "nama": "Lee Slimfit",
-            "harga": 335000
+            "harga": 335000,
+            "id_tag": 4294943404
+        },
+        {
+            "id_barang": 11,
+            "jenis": "sandal",
+            "merek": "adidas",
+            "nama": "yeezy spesial",
+            "harga": "Rp.225.000",
+            "id_tag": 4294943405
+        },
+        {
+            "id_barang": 12,
+            "jenis": "sandal",
+            "merek": "Nike",
+            "nama": "slip on jordan",
+            "harga": "19000",
+            "id_tag": 4294943415
         }
     ]
 }
