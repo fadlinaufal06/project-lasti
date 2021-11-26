@@ -16,21 +16,21 @@ async def root():
 async def take_all():
     return data['pembelian']
 
-@app.get('/pembelian{ID_barang}')
+@app.get('/pembelian{ID_pembelian}')
 async def take_one(id: int):
     for pembelian in data['pembelian']:
-        if pembelian['ID_barang'] == id:
+        if pembelian['ID_pembelian'] == id:
             return pembelian
     raise HTTPException(
         status_code=404, detail=f'Item not found'
     )
 
 @app.post('pembelian')
-async def add(id: int, warna: str, merek: str, jenis: str, harga: float, size: int, diskon: float, rating: float):
+async def add(id: int, id_barang: int, warna: str, merek: str, jenis: str, harga: float, size: int, diskon: float, rating: float):
     id = 1
     if (len(data['pembelian'])>0):
-        id = data['pembelian'][len(data['pembelian'])-1]['ID_barang']+1
-    new_data = {'ID_barang':id,'Warna_barang':warna, 'Merek': merek, 'Jenis': jenis, 'Harga': harga, 'Universal_size_(1-10)': size, 'Diskon_(%)':diskon, 'Rating': rating}
+        id = data['pembelian'][len(data['pembelian'])-1]['ID_pembelian']+1
+    new_data = {'ID_pembelian':id,'ID_barang':id_barang,'Warna_barang':warna, 'Merek': merek, 'Jenis': jenis, 'Harga': harga, 'Universal_size_(1-10)': size, 'Diskon_(%)':diskon, 'Rating': rating}
     data['pembelian'].append(dict(new_data))
     read_file.close()
     with open("datapembelian.json", "w") as write_file:
@@ -42,10 +42,11 @@ async def add(id: int, warna: str, merek: str, jenis: str, harga: float, size: i
         status_code=500, detail=f'Internal Server Error'
     )
 
-@app.put('pembelian')
-async def change(id: int, warna: str, merek: str, jenis: str, harga: float, size: int, diskon: float, rating: float):
+@app.put('/pembelian')
+async def change(id: int, id_barang: int,warna: str, merek: str, jenis: str, harga: float, size: int, diskon: float, rating: float):
     for pembelian in data['pembelian']:
-        if pembelian['ID_barang'] == id:
+        if pembelian['ID_pembelian'] == id:
+            pembelian['ID_barang'] = id_barang
             pembelian['Warna_barang'] = warna
             pembelian['Merek'] = merek
             pembelian['Jenis'] = jenis
@@ -75,7 +76,7 @@ async def delete_all():
 @app.delete('/pembelian{ID_barang}')
 async def delete_one(id: int):
     for pembelian in data['pembelian']:
-        if pembelian['ID_barang'] == id:
+        if pembelian['ID_pembelian'] == id:
             data['pembelian'].remove(pembelian)
             read_file.close()
             with open("datapembelian.json", "w") as write_file:
