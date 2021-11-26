@@ -2,8 +2,6 @@ from datetime import datetime, timedelta
 from typing import Optional
 
 from fastapi import Depends, FastAPI, HTTPException, status
-from fastapi.security import OAuth2PasswordBearer, OAuth2PasswordRequestForm
-from jose import JWTError, jwt
 from passlib.context import CryptContext
 from pydantic import BaseModel
 import json
@@ -17,8 +15,7 @@ with open("databarang.json", "r") as read_file:
 
 @app.get('/')
 def root():
-    return{'Data Barang'}
-
+    return{'Data Barang Matahari'}
 
 ## CRUD Barang ##################################
 
@@ -30,7 +27,7 @@ async def read_all_barang():
 
 #Get by id
 @app.get('/barang{item_id}')
-async def read_barang(item_id: str):
+async def read_barang(item_id: int):
     for barang_item in data['barang']:
         if barang_item['id'] == item_id:
             return barang_item
@@ -41,14 +38,14 @@ async def read_barang(item_id: str):
 #Untuk Tambah barang  # Tolong Ini ID nya didapat dari scan RFID ini gatau python bisa read atau masukin manual
 # Sementara ID dibikin integer dulu dan updatenya increment dari 1 (sama dengan tst)
 @app.post('/barang')
-async def post_barang(barang_warna:str, jenis_barang:str, merek:str, waktu_pembelian:str, waktu_penjualan:str, jumlah_pembelian:str):
-    id=1 
+async def post_barang(jenis:str, merek:str, nama:str, harga: str):
+    id=1
     if(len(data["barang"])>0):
-        id=data["barang"][len(data["barang"])-1]["id"]+1
-    new_data={'id':id, 'warna':barang_warna, 'jenis':jenis_barang, "merek":merek, "waktu pembelian":waktu_pembelian, 'waktu_penjualan':waktu_penjualan, 'jumlah pembelian': jumlah_pembelian}
+        id=data["barang"][len(data["barang"])-1]["id_barang"]+1
+    new_data={'id_barang':id, 'jenis':jenis, 'merek':merek, "nama":nama, "harga":harga}
     data['barang'].append(dict(new_data))
     read_file.close()
-    with open("barang.json", "w") as write_file:
+    with open("databarang.json", "w") as write_file:
         json.dump(data,write_file,indent=4)
     write_file.close()
 
@@ -56,16 +53,17 @@ async def post_barang(barang_warna:str, jenis_barang:str, merek:str, waktu_pembe
     raise HTTPException(
         status_code=500, detail=f'Error'
     )   
+  
 
 
 #Untuk Delete barang bedasarkan Id
 @app.delete('/barang{item_id}')
 async def delete_barang(item_id: int):
     for barang_item in data['barang']:
-        if barang_item['id'] == item_id:
+        if barang_item['id_barang'] == item_id:
             data['barang'].remove(barang_item) 
             read_file.close()
-            with open("barang.json", "w") as write_file:
+            with open("databarang.json", "w") as write_file:
                 json.dump(data,write_file,indent=4)
             write_file.close()
             return{"message":"Data successfully deleted"}
@@ -75,12 +73,12 @@ async def delete_barang(item_id: int):
 
 # ini sama id nya dari RFID gatau manual apa engga
 @app.put('/barang{item_id}')
-async def update_barang(item_id: int, name:str):
+async def update_barang(item_id: int, nama:str):
     for barang_item in data['barang']:
-        if barang_item['id'] == item_id:
-            barang_item['name'] = name
+        if barang_item['id_barang'] == item_id:
+            barang_item['nama'] = nama
             read_file.close()
-            with open("barang.json", "w") as write_file:
+            with open("databarang.json", "w") as write_file:
                 json.dump(data,write_file,indent=4)
             write_file.close()
             return{"message":"Data successfully updated"}
@@ -89,3 +87,4 @@ async def update_barang(item_id: int, name:str):
     )
 
     
+
