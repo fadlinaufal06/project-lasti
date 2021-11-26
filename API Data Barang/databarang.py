@@ -26,10 +26,10 @@ async def read_all_barang():
     return data
 
 #Get by id
-@app.get('/barang{item_id}')
-async def read_barang(item_id: int):
+@app.get('/barang{tag_id}')
+async def read_barang(tag_id: int):
     for barang_item in data['barang']:
-        if barang_item['id_barang'] == item_id:
+        if barang_item['id_tag'] == tag_id:
             return barang_item
     raise HTTPException(
         status_code=404, detail=f'Item not found'
@@ -38,11 +38,11 @@ async def read_barang(item_id: int):
 #Untuk Tambah barang  # Tolong Ini ID nya didapat dari scan RFID ini gatau python bisa read atau masukin manual
 # Sementara ID dibikin integer dulu dan updatenya increment dari 1 (sama dengan tst)
 @app.post('/barang')
-async def post_barang(jenis:str, merek:str, nama:str, harga: str):
+async def post_barang(jenis:str, merek:str, nama:str, harga: str, id_tag:int):
     id=1
     if(len(data["barang"])>0):
         id=data["barang"][len(data["barang"])-1]["id_barang"]+1
-    new_data={'id_barang':id, 'jenis':jenis, 'merek':merek, "nama":nama, "harga":harga}
+    new_data={'id_barang':id, 'jenis':jenis, 'merek':merek, "nama":nama, "harga":harga, "id_tag":id_tag}
     data['barang'].append(dict(new_data))
     read_file.close()
     with open("databarang.json", "w") as write_file:
@@ -87,4 +87,3 @@ async def update_barang(item_id: int, nama:str):
     )
 
     
-
