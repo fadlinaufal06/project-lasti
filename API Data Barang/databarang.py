@@ -29,7 +29,7 @@ async def read_all_barang():
 @app.get('/barang{item_id}')
 async def read_barang(item_id: int):
     for barang_item in data['barang']:
-        if barang_item['id'] == item_id:
+        if barang_item['id_barang'] == item_id:
             return barang_item
     raise HTTPException(
         status_code=404, detail=f'Item not found'
