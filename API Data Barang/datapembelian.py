@@ -1,10 +1,34 @@
 import json
+from typing import Dict, List
 from fastapi import FastAPI,HTTPException
 from fastapi.responses import JSONResponse
 from fastapi.encoders import jsonable_encoder
+from sklearn.preprocessing import LabelEncoder
+import pickle
+import pandas
+import numpy
+
+from pydantic import BaseModel
+
+file_model = 'finalized_model.sav'
+model = pickle.load(open(file_model, 'rb'))
 
 with open("datapembelian.json", "r") as read_file:
     data = json.load(read_file)
+
+datamodel = data["pembelian"]
+
+
+def check_id(array,id,string):
+    check = False
+    for item in array:
+        if (item[string] == id):
+            check = True
+    return check
+
+class RekomendasiBase(BaseModel):
+    id_produk: int
+    rekomendasi :str
 
 app = FastAPI()
 
@@ -24,6 +48,36 @@ async def take_one(id: int):
     raise HTTPException(
         status_code=404, detail=f'Item not found'
     )
+
+@app.get('/pembelian/rekomendasi', response_model = List[RekomendasiBase])
+def recommend_all():
+    df3= pandas.DataFrame(datamodel)
+    label_encoder = LabelEncoder()
+    df3.drop(['ID_pembelian','Diskon_(%)','Universal_size_(1-10)'], axis=1)
+    df3['Jenis'] = label_encoder.fit_transform(df3['Jenis'])
+    df3['Warna_barang'] = label_encoder.fit_transform(df3['Warna_barang'])
+    df3['Merek'] = label_encoder.fit_transform(df3['Merek'])
+    df3['Harga'] = df3['Harga'].str.replace(r'.','').astype(float)
+    df3['Rating'] = df3['Rating'].str.replace(r',','.').astype(float)
+    df3['Harga'] = df3['Harga'].div(1000000)
+    
+    df3 = df3.dropna()
+    basearray = []
+    rekomendasi = []
+    for i, row in df3.iterrows():
+        temp = [[(row['Harga']), row['Merek'],row['Jenis'],row['Rating'],row['Warna_barang']]]
+        temp = numpy.asarray(temp, dtype=object)
+        temp.reshape(1,-1)
+        if (not check_id(rekomendasi,row["ID_barang"],"id_produk")):
+            recom_dict = {}
+            recom_dict["id_produk"] = row["ID_barang"]
+            arr = model.predict(temp)
+            recom_dict['rekomendasi'] = str(arr[0])
+            rekomendasi.append(recom_dict)
+        basearray.append(temp)
+    
+    return rekomendasi
+
 
 @app.post('pembelian')
 async def add(id: int, id_barang: int, warna: str, merek: str, jenis: str, harga: float, size: int, diskon: float, rating: float):
