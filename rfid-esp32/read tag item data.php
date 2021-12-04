@@ -1,26 +1,26 @@
 <?php
     require 'database.php';
-    $id = null;
-    if ( !empty($_GET['id'])) {
-        $id = $_REQUEST['id'];
+    $id_tag = null;
+    if ( !empty($_GET['id_tag'])) {
+        $id_tag = $_REQUEST['id_tag'];
     }
      
     $pdo = Database::connect();
 	$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-	$sql = "SELECT * FROM table_the_iot_projects where id = ?";
+	$sql = "SELECT * FROM item_data_matahari where id_tag = ?";
 	$q = $pdo->prepare($sql);
-	$q->execute(array($id));
+	$q->execute(array($id_tag));
 	$data = $q->fetch(PDO::FETCH_ASSOC);
 	Database::disconnect();
 	
 	$msg = null;
-	if (null==$data['name']) {
+	if (null==$data['nama']) {
 		$msg = "The ID of your Card / KeyChain is not registered !!!";
-		$data['id']=$id;
-		$data['name']="--------";
-		$data['gender']="--------";
-		$data['email']="--------";
-		$data['mobile']="--------";
+		$data['id_tag']=$id_tag;
+		$data['nama']="--------";
+		$data['add_info']="--------";
+		$data['harga']="--------";
+		$data['stok']="--------";
 	} else {
 		$msg = null;
 	}
@@ -47,7 +47,7 @@
 				<table  width="452" border="1" bordercolor="#10a0c5" align="center"  cellpadding="0" cellspacing="1"  bgcolor="#000" style="padding: 2px">
 					<tr>
 						<td  height="40" align="center"  bgcolor="#10a0c5"><font  color="#FFFFFF">
-						<b>User Data</b></font></td>
+						<b>Item Data</b></font></td>
 					</tr>
 					<tr>
 						<td bgcolor="#f9f9f9">
@@ -55,27 +55,27 @@
 								<tr>
 									<td width="113" align="left" class="lf">ID</td>
 									<td style="font-weight:bold">:</td>
-									<td align="left"><?php echo $data['id'];?></td>
+									<td align="left"><?php echo $data['id_tag'];?></td>
 								</tr>
 								<tr bgcolor="#f2f2f2">
-									<td align="left" class="lf">Name</td>
+									<td align="left" class="lf">Nama</td>
 									<td style="font-weight:bold">:</td>
-									<td align="left"><?php echo $data['name'];?></td>
+									<td align="left"><?php echo $data['nama'];?></td>
 								</tr>
 								<tr>
-									<td align="left" class="lf">Gender</td>
+									<td align="left" class="lf">Keterangan</td>
 									<td style="font-weight:bold">:</td>
-									<td align="left"><?php echo $data['gender'];?></td>
+									<td align="left"><?php echo $data['add_info'];?></td>
 								</tr>
 								<tr bgcolor="#f2f2f2">
-									<td align="left" class="lf">Email</td>
+									<td align="left" class="lf">Harga</td>
 									<td style="font-weight:bold">:</td>
-									<td align="left"><?php echo $data['email'];?></td>
+									<td align="left"><?php echo $data['harga'];?></td>
 								</tr>
 								<tr>
-									<td align="left" class="lf">Mobile Number</td>
+									<td align="left" class="lf">Stok</td>
 									<td style="font-weight:bold">:</td>
-									<td align="left"><?php echo $data['mobile'];?></td>
+									<td align="left"><?php echo $data['stok'];?></td>
 								</tr>
 							</table>
 						</td>

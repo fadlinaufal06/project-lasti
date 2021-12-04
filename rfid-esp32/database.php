@@ -1,10 +1,10 @@
 <?php
 	class Database
 	{
-		private static $dbName = 'nodemcu_rfid_iot_projects' ;
+		private static $dbName = 'iotmatahari' ;
 		private static $dbHost = 'localhost' ;
-		private static $dbUsername = 'theiotprojects';
-		private static $dbUserPassword = 'theiotprojects.com';
+		private static $dbUsername = 'data_item_matahari';
+		private static $dbUserPassword = 'lastikel8project';
 		 
 		private static $cont  = null;
 		 

@@ -4,19 +4,19 @@
  
     if ( !empty($_POST)) {
         // keep track post values
-        $name = $_POST['name'];
-		$id = $_POST['id'];
-		$gender = $_POST['gender'];
-        $email = $_POST['email'];
-        $mobile = $_POST['mobile'];
+        $id_tag = $_POST['id_tag'];
+		$nama = $_POST['nama'];
+		$add_info = $_POST['add_info'];
+        $harga = $_POST['harga'];
+        $stok = $_POST['stok'];
         
 		// insert data
         $pdo = Database::connect();
 		$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-		$sql = "INSERT INTO table_the_iot_projects (name,id,gender,email,mobile) values(?, ?, ?, ?, ?)";
+		$sql = "INSERT INTO item_data_matahari (id_tag,nama,add_info,harga,stok) values(?, ?, ?, ?, ?)";
 		$q = $pdo->prepare($sql);
-		$q->execute(array($name,$id,$gender,$email,$mobile));
+		$q->execute(array($id_tag,$nama,$add_info,$harga,$stok));
 		Database::disconnect();
-		header("Location: user data.php");
+		header("Location: item_data.php");
     }
 ?>

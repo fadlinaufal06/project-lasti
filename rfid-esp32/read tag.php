@@ -64,21 +64,21 @@
 		}
 		</style>
 		
-		<title>Read Tag : NodeMCU V3 ESP8266 / ESP12E with MYSQL Database</title>
+		<title>Read Tag : MATAHARI ITEM INFORMATION</title>
 	</head>
 	
 	<body>
-		<h2 align="center">NodeMCU V3 ESP8266 / ESP12E with MYSQL Database</h2>
+		<h2 align="center">MATAHARI ITEM INFORMATION</h2>
 		<ul class="topnav">
 			<li><a href="home.php">Home</a></li>
-			<li><a href="user data.php">User Data</a></li>
-			<li><a href="registration.php">Registration</a></li>
+			<li><a href="item_data.php">Item Data</a></li>
+			<li><a href="registration.php">Add Item</a></li>
 			<li><a class="active" href="read tag.php">Read Tag ID</a></li>
 		</ul>
 		
 		<br>
 		
-		<h3 align="center" id="blink">Please Scan Tag to Display ID or User Data</h3>
+		<h3 align="center" id="blink">Please Scan Tag to Display Item Information</h3>
 		
 		<p id="getUID" hidden></p>
 		
@@ -89,7 +89,7 @@
 				<table  width="452" border="1" bordercolor="#10a0c5" align="center"  cellpadding="0" cellspacing="1"  bgcolor="#000" style="padding: 2px">
 					<tr>
 						<td  height="40" align="center"  bgcolor="#10a0c5"><font  color="#FFFFFF">
-							<b>User Data</b>
+							<b>Item Data</b>
 							</font>
 						</td>
 					</tr>
@@ -102,22 +102,22 @@
 									<td align="left">--------</td>
 								</tr>
 								<tr bgcolor="#f2f2f2">
-									<td align="left" class="lf">Name</td>
+									<td align="left" class="lf">Nama</td>
 									<td style="font-weight:bold">:</td>
 									<td align="left">--------</td>
 								</tr>
 								<tr>
-									<td align="left" class="lf">Gender</td>
+									<td align="left" class="lf">Keterangan</td>
 									<td style="font-weight:bold">:</td>
 									<td align="left">--------</td>
 								</tr>
 								<tr bgcolor="#f2f2f2">
-									<td align="left" class="lf">Email</td>
+									<td align="left" class="lf">Harga</td>
 									<td style="font-weight:bold">:</td>
 									<td align="left">--------</td>
 								</tr>
 								<tr>
-									<td align="left" class="lf">Mobile Number</td>
+									<td align="left" class="lf">Stok</td>
 									<td style="font-weight:bold">:</td>
 									<td align="left">--------</td>
 								</tr>
@@ -169,7 +169,7 @@
 							document.getElementById("show_user_data").innerHTML = this.responseText;
 						}
 					};
-					xmlhttp.open("GET","read tag user data.php?id="+str,true);
+					xmlhttp.open("GET","read tag item data.php?id="+str,true);
 					xmlhttp.send();
 				}
 			}
